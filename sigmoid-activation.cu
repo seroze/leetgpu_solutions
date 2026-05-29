@@ -2,7 +2,7 @@
 #include <math.h>
 
 __device__  double sigmoid(double x) {
-    return 1.0 / (1.0 + expf(-x));
+    return 1.0f / (1.0f + expf(-x));
 }
 
 __global__ void sigmoid_kernel(const float* X, float* Y, int N) {
